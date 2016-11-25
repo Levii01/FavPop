@@ -1,1 +1,12 @@
+{{#if session.isAuthenticated}}
+  Logged in as {{session.currentUser.displayName}}
+<img src="{{session.currentUser.photoURL}}" class="avatar">
+  {{#paper-button onClick=(action "signOut")}}
+    Sign out
+  {{/paper-button}}
+{{else}}
+  {{#paper-button onClick=(action "signIn") }}
+    Sign in with Google
+  {{/paper-button}}
+{{/if}}
 {{yield}}
