@@ -1,0 +1,11 @@
+
+<div class="layout-row">
+  {{#each model as |user|}}
+    <div class="layout-column user" {{action "addRating" user}}>
+      <h1>{{user.name}}</h1>
+      <img src="{{user.imageUrl}}"/>
+      <h2>{{user.ratings.length}}</h2>
+    </div>
+  {{/each}}
+</div>
+{{outlet}}
