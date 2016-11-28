@@ -2,9 +2,9 @@
 <div class="layout-row">
   {{#each model as |user|}}
     <div class="layout-column user" {{action "addRating" user}}>
-      <h1>{{user.name}}</h1>
-      <img src="{{user.imageUrl}}"/>
-      <h2>{{user.ratings.length}}</h2>
+      <h1 class="tex">{{user.name}}</h1>
+      <img src="{{user.imageUrl}}" class="avatarUser"/>
+      <h2 class="like">Like: {{user.ratings.length}}</h2>
     </div>
   {{/each}}
 </div>
