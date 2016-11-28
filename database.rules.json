@@ -1,6 +1,15 @@
 {
   "rules": {
     ".read": true,
-    ".write": true
+    "users": {
+      "$userId": {
+        ".write": "auth != null"
+      }
+    },
+    "rates": {
+      "$rateId": {
+        ".write": "auth != null && !data.exists() && (newData.child('user').val() != auth.uid)"
+      }
+    }
   }
 }
