@@ -1,6 +1,7 @@
 {{#if session.isAuthenticated}}
   Logged in as {{session.currentUser.displayName}}
-<img src="{{session.currentUser.photoURL}}" class="avatar">
+{{!-- <img src="{{session.currentUser.photoURL}}" class="avatar"> --}}
+<img src="{{session.currentUser.imageUrl}}" class="avatar">
   {{#paper-button onClick=(action "signOut")}}
     Sign out
   {{/paper-button}}
