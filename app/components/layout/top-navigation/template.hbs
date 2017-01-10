@@ -1,21 +1,23 @@
 {{#paper-toolbar}}
   {{#paper-toolbar-tools}}
-    {{#paper-button iconButton=true}}
-      {{paper-icon "menu"}}
-    {{/paper-button}}
+    {{#link-to 'index'}}
+      {{paper-icon "star" size=36 spin=true}}
+    {{/link-to}}
     <h2>
-      Toolbar with Icon Buttons
+      FavPop
     </h2>
     <span class="flex"></span>
 
   {{authentication.log-in-out}}
 
-    {{#paper-button iconButton=true}}
-      {{paper-icon "favorite"}}
-    {{/paper-button}}
-    {{#paper-button iconButton=true}}
-      {{paper-icon "more_vert"}}
-    {{/paper-button}}
+    <a target="_blank" href="https://levii01.github.io/">
+        {{#paper-button iconButton=true}}
+          {{paper-icon "favorite"}}
+        {{/paper-button}}
+    </a>
+    {{#link-to 'index'}}
+      {{#paper-button}}Home{{/paper-button}}
+    {{/link-to}}
   {{/paper-toolbar-tools}}
 {{/paper-toolbar}}
 {{yield}}
